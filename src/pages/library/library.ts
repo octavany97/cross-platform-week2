@@ -20,4 +20,7 @@ export class LibraryPage implements OnInit {
     console.log(this.quoteCollection);
   }
 
+  goToDetailQuotes(quoteParam){
+    this.navCtrl.push("QuotesPage", quoteParam);
+  }
 }

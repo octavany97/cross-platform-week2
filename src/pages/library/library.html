@@ -13,7 +13,7 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let quoteGroup of quoteCollection">
+    <button ion-item *ngFor="let quoteGroup of quoteCollection" (click)="goToDetailQuotes(quoteGroup)">
       <ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
       <h2>{{ quoteGroup.category | uppercase }}</h2>
       <p *ngIf="quoteGroup.quotes.length > 0">{{ quoteGroup.quotes.length }} Quote(s)</p>
