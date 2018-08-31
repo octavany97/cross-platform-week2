@@ -1,18 +1,27 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { TabOnePage } from '../tab-one/tab-one';
-import { TabTwoPage } from '../tab-two/tab-two';
+import { LibraryPage }  from '../library/library';
+import { FavoritesPage } from '../favorites/favorites';
 
 @IonicPage()
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
+  // atau
+  /*
+  `
+    <ion-tabs>
+      <ion-tab [root]='libraryPage' tabTitle='Library' tabIcon='book'></ion-tab>
+      <ion-tab [root]='favoritesPage' tabTitle='Favorites' tabIcon='star'></ion-tab>
+    </ion-tabs>
+  `
+  */
 })
 export class TabsPage {
-  tabOnePage = TabOnePage;
-  tabTwoPage = TabTwoPage;
-  
+  libraryPage = LibraryPage;
+  favoritesPage = FavoritesPage;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
